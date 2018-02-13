@@ -40,10 +40,10 @@ export class HomePage implements OnInit{
   }
 
 
-  ngOnInit(){
+  comenzarRuta(){
     setInterval(() => {
       this.updateTask();
-    }, 1000);
+    }, 30000);
   }
 
   getLocation(){
@@ -72,8 +72,7 @@ export class HomePage implements OnInit{
     .catch((error: any) => console.log(error));
   }
 
-  createTask(){
-    
+  createTask(){    
     this.getLocation();
     this.tasksRef.push({
       id: this.udid,
